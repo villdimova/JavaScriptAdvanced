@@ -6,9 +6,14 @@ function timeToWalk(steps,footLength,speed){
     
     let timeInHours=Math.floor(time/3600); 
     let timeInMinuts=Math.floor(time/60);
-    let timeInSeconds=time%60;
-
-    console.log(`${timeInHours}:${timeInMinuts}:${timeInSeconds}`);
+    let timeInSeconds=Math.ceil(time%60);
+    
+   console.log(`${timeInHours<10 ? 0 : ''}${timeInHours}:${timeInMinuts<10 ? 0 : ''}${timeInMinuts}:${timeInSeconds<10 ? 0 : ''}${timeInSeconds}`);
+    
+   
 }
+ 
+ 
 
 timeToWalk(4000, 0.60, 5);
+timeToWalk(2504, 0.70, 5.5);
