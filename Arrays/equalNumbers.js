@@ -2,18 +2,14 @@ function solve(matrix){
     let pairsCount=0;
 matrix.forEach((row,i)=>{
     row.forEach((element,j)=>{
-        if(element===row[j-1]){
-            pairsCount++;
-        }
+        
         if(element===row[j+1]){
             pairsCount++;
         }
-        if (element===matrix[i+1]) {
+        if (matrix[i+1] && element===matrix[i+1][j]) {
             pairsCount++;
         }
-        if (element===matrix[i-1]) {
-            pairsCount++;
-        }
+        
     });       
 });
     console.log(pairsCount);
